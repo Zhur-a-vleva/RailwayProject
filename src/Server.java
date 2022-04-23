@@ -13,6 +13,6 @@ public class Server {
     }
 
     public void updateDeparture(Departure departure) {
-        
+
     }
 }

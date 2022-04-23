@@ -16,6 +16,7 @@ public class Admin implements Subscriber {
 
     @Override
     public void updateInfo() {
+
         //TODO(download changes from server)
     }
 }
