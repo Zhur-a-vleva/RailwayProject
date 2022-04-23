@@ -6,9 +6,9 @@ public class Departure {
     private Train train;
     private Station toStation;
 
-    public Departure(LocalDate departedTime, LocalDate expectedArrivalTime, Train train, Station toStation){
-        this.departedTime = departedTime;
-        this.expectedArrivalTime = expectedArrivalTime;
+    public Departure(String departedTime, String expectedArrivalTime, Train train, Station toStation){
+        this.departedTime = LocalDate.parse(departedTime, GlobalInfo.dtf);
+        this.expectedArrivalTime = LocalDate.parse(expectedArrivalTime, GlobalInfo.dtf);
         this.train = train;
         this.toStation = toStation;
     }

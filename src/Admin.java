@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Admin implements Subscriber {
 
     private final Station station;
@@ -10,13 +12,21 @@ public class Admin implements Subscriber {
         return station;
     }
 
-    public void uploadChanges() {
-        //TODO(upload changes to server)
+    public void uploadChanges(Departure newDeparture) {
+        if (checkLogin()) {
+            GlobalInfo.getServer().updateDeparture(newDeparture);
+        }
     }
 
     @Override
     public void updateInfo() {
+        station.updateTimeTables();
+    }
 
-        //TODO(download changes from server)
+    public boolean checkLogin() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Input login");
+        String login = scanner.nextLine();
+        return login.equals(GlobalInfo.getAdminLogin());
     }
 }
