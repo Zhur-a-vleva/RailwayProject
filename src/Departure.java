@@ -12,4 +12,20 @@ public class Departure {
         this.train = train;
         this.toStation = toStation;
     }
+
+    public LocalDate getDepartedTime(){
+        return this.departedTime;
+    }
+
+    public Station getToStation() {
+        return toStation;
+    }
+
+    public LocalDate getExpectedArrivalTime() {
+        return expectedArrivalTime;
+    }
+
+    public Train getTrain() {
+        return train;
+    }
 }
