@@ -4,8 +4,8 @@ import java.util.HashMap;
 public class Train {
     private String name;
 
-    public Train(String s){
-        this.name = s;
+    public Train(String name){
+        this.name = name;
     }
 
     public String getName(){

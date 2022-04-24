@@ -4,12 +4,14 @@ public class Departure {
     private LocalDate departedTime;
     private LocalDate expectedArrivalTime;
     private Train train;
+    private Station fromStation;
     private Station toStation;
 
-    public Departure(String departedTime, String expectedArrivalTime, Train train, Station toStation){
+    public Departure(String departedTime, String expectedArrivalTime, Train train, Station fromStation, Station toStation){
         this.departedTime = LocalDate.parse(departedTime, GlobalInfo.dtf);
         this.expectedArrivalTime = LocalDate.parse(expectedArrivalTime, GlobalInfo.dtf);
         this.train = train;
+        this.fromStation = fromStation;
         this.toStation = toStation;
     }
 
@@ -19,6 +21,10 @@ public class Departure {
 
     public Station getToStation() {
         return toStation;
+    }
+
+    public Station getFromStation() {
+        return fromStation;
     }
 
     public LocalDate getExpectedArrivalTime() {
