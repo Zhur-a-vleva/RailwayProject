@@ -53,5 +53,6 @@ public class GlobalInfo {
         Admin adminUfa = sUfa.getAdmin();
         adminUfa.uploadChanges(new Departure("24-04-2022 19:56:00", "25-04-2022 02:56:00",
                 new Train("Ufa-Kazan"), sUfa, sKazan));
+
     }
 }

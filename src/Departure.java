@@ -1,21 +1,21 @@
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Departure {
-    private final LocalDate departedTime;
-    private final LocalDate expectedArrivalTime;
+    private final LocalDateTime departedTime;
+    private final LocalDateTime expectedArrivalTime;
     private final Train train;
     private final Station fromStation;
     private final Station toStation;
 
     public Departure(String departedTime, String expectedArrivalTime, Train train, Station fromStation, Station toStation) {
-        this.departedTime = LocalDate.parse(departedTime, GlobalInfo.getDtf());
-        this.expectedArrivalTime = LocalDate.parse(expectedArrivalTime, GlobalInfo.getDtf());
+        this.departedTime = LocalDateTime.parse(departedTime, GlobalInfo.getDtf());
+        this.expectedArrivalTime = LocalDateTime.parse(expectedArrivalTime, GlobalInfo.getDtf());
         this.train = train;
         this.fromStation = fromStation;
         this.toStation = toStation;
     }
 
-    public LocalDate getDepartedTime() {
+    public LocalDateTime getDepartedTime() {
         return this.departedTime;
     }
 
@@ -27,7 +27,7 @@ public class Departure {
         return fromStation;
     }
 
-    public LocalDate getExpectedArrivalTime() {
+    public LocalDateTime getExpectedArrivalTime() {
         return expectedArrivalTime;
     }
 
