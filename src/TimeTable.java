@@ -2,7 +2,7 @@ import java.util.List;
 
 public class TimeTable {
 
-    private String way;
+    private final String way;
 
     public TimeTable(String way) {
         this.way = way;

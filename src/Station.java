@@ -3,8 +3,8 @@ import java.util.ArrayList;
 public class Station {
     private String name;
     private Admin admin;
-    private ArrayList<TimeTable> timeTables;
-    private ArrayList<Departure> departures;
+    private final ArrayList<TimeTable> timeTables;
+    private final ArrayList<Departure> departures;
 
     public Station(String name){
         this.name = name;

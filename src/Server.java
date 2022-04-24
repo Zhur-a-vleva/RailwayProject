@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Server {
-    private List<Subscriber> subscribers;
+    private final List<Subscriber> subscribers = new ArrayList<>();
 
     public void subscribe(Subscriber subscriber) {
         subscribers.add(subscriber);
@@ -20,6 +20,8 @@ public class Server {
                 oldDepartures.set(i, departure);
             }
         }
-        to.getAdmin().updateInfo();
+        if (subscribers.contains(to.getAdmin())) {
+            to.getAdmin().updateInfo();
+        }
     }
 }

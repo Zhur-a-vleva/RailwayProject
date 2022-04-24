@@ -1,14 +1,16 @@
-import java.io.PrintStream;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 
 public class GlobalInfo {
 
     // global variables
 
-    public static DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
     private static final Server server = new Server();
     private static final String ADMIN_LOGIN = "gefkmld&vedfn#";
+    public static DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+
+    public static DateTimeFormatter getDtf() {
+        return dtf;
+    }
 
     public static Server getServer() {
         return server;
@@ -42,6 +44,10 @@ public class GlobalInfo {
         sMoscow.addTimeTable(new TimeTable("Way 2"));
         sMoscow.addTimeTable(new TimeTable("Way 3"));
         sMoscow.addTimeTable(new TimeTable("Way 4"));
+
+        server.subscribe(sUfa.getAdmin());
+        server.subscribe(sKazan.getAdmin());
+        server.subscribe(sMoscow.getAdmin());
 
         // Delay train from Ufa to Kazan
         Admin adminUfa = sUfa.getAdmin();
