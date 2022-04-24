@@ -11,7 +11,8 @@ public class TimeTable {
     public void printSchedule(List<Departure> departures) {
         System.out.println(way + ":");
         for (Departure departure : departures) {
-            System.out.println(departure.getTrain().getName() + ": " + departure.getExpectedArrivalTime());
+            System.out.println(departure.getTrain().getName() + " arrival: " + departure.getExpectedArrivalTime().getHour() + ":" +
+                    departure.getExpectedArrivalTime().getMinute());
         }
         System.out.println("-------------------------------------\n");
     }
