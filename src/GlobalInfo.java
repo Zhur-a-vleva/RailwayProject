@@ -20,7 +20,7 @@ public class GlobalInfo {
         return ADMIN_LOGIN;
     }
 
-    // Use-cases of the system
+    // Use-cases of the system, test cases can be changed
     public static void main(String[] args) {
         Station sUfa = new Station("Ufa");
         Station sKazan = new Station("Kazan");

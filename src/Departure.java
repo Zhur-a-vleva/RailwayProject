@@ -1,5 +1,10 @@
 import java.time.LocalDateTime;
 
+
+/**
+ * Class Departure is used to represent the information, that is stored on server and then updated on timetables. It has 5 fields:
+ * departed time, expected arrival time, train itself, and from-to stations. It uses LocalDateTime, so it stores both data and time.
+ */
 public class Departure {
     private final LocalDateTime departedTime;
     private final LocalDateTime expectedArrivalTime;

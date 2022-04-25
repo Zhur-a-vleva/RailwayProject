@@ -1,3 +1,6 @@
+/**
+ * Class Train has only it's name. Another information can be added if it is necessary.
+ */
 public class Train {
     private final String name;
 

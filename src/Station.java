@@ -1,5 +1,9 @@
 import java.util.ArrayList;
 
+/**
+ * Class Station represents station with its admin and timetables(displays). Admin is the only one single person, but there can be more than one
+ * timetable. Also it has list of departures, that can be updated.
+ */
 public class Station {
     private String name;
     private Admin admin;
@@ -17,7 +21,7 @@ public class Station {
         return this.name;
     }
 
-    public void updateTimeTables() {
+    public void updateTimeTables() {                //updates info on timetables
         for (TimeTable timeTable : timeTables) {
             timeTable.printSchedule(departures);
         }
@@ -25,7 +29,7 @@ public class Station {
 
     public ArrayList<Departure> getDepartures() {
         return departures;
-    }
+    } //returns list of departures
 
     public void addDeparture(Departure departure) {
         departures.add(departure);

@@ -1,5 +1,9 @@
 import java.util.List;
 
+/**
+ * Class TimeTable represents timetables(displays) on stations. It has only one method printSchedule() to show
+ * departure and arrival time of a train.
+ */
 public class TimeTable {
 
     private final String way;
